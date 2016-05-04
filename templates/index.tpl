@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {literal}
+        <style>
+                h1{
+                    color:tomato;
+                }
+        </style>
+    {/literal}
+</head>
+<body>
+    {*
+    注释内容不能嵌套
+    *}
+    <h1>{$title}</h1>
+    <p>{$content}</p>
+    <div>{$money}</div>
+    <div>{$yes}</div>
+    <ul>
+        <li>{$hero[0]}</li>
+        <li>{$hero[1]}</li>
+        <li>{$hero[2]}</li>
+        <li>{$hero[3]}</li>
+        <li>{$hero[4]}</li>
+    </ul>
+    <ul>
+        <li>{$weapon['dx']}</li>
+        <li>{$weapon['xh']}</li>
+        <li>{$weapon['nd']}</li>
+        <li>{$weapon['bg']}</li>
+    </ul>
+    <hr>
+    <ul>
+        <li>{$weapon.dx}</li>
+        <li>{$weapon.xh}</li>
+        <li>{$weapon.nd}</li>
+        <li>{$weapon.bg}</li>
+    </ul>
+</body>
+</html>
