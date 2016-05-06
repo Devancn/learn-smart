@@ -28,5 +28,6 @@ $weapon=array(
 );
 $smarty->assign('hero',$hero);
 $smarty->assign('weapon',$weapon);
+define("ROOT",getcwd());
 //载入模板页面
 $smarty->display('index.tpl');

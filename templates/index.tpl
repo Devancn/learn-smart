@@ -5,9 +5,9 @@
     <title>Title</title>
     {literal}
         <style>
-                h1{
-                    color:tomato;
-                }
+            h1{
+                color:tomato;
+            }
         </style>
     {/literal}
 </head>
@@ -16,7 +16,7 @@
     注释内容不能嵌套
     *}
     <h1>{$title}</h1>
-    <p>{$content}</p>
+    <p>{$content|mytool:'这是自定义的变量调节器'}</p>
     <div>{$money}</div>
     <div>{$yes}</div>
     <ul>
@@ -39,5 +39,13 @@
         <li>{$weapon.nd}</li>
         <li>{$weapon.bg}</li>
     </ul>
+    <p>{$smarty.now}</p>
+    <p>{$smarty.server.SERVER_NAME}</p>
+    <p>{$smarty.version}</p>
+    <p>{$smarty.const.ROOT}</p>
+    {config_load file='site.conf' section='chongyang'}
+    {*smarty两种调用配置文件方式*}
+    <footer style="color:{$smarty.config.color}">{#copyright#}</footer>
+    <footer>{$smarty.config.police}</footer>
 </body>
 </html>
